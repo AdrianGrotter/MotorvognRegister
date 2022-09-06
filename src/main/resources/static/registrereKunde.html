@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Kunder</title>
+</head>
+<body>
+<button class="btn btn-primary" onclick="forside()">Forside</button><br/>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Kunderegistrering</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label for="fornavn">Fornavn</label>
+                    <input type="text" class="form-control" id="fornavn" onchange="validerNavn(this.value)" placeholder="Fornavn"/>
+                    <span id="regexNavn" style="color: red"></span>
+                </div>
+                <div class="form-group">
+                    <label for="passord">Passord</label>
+                    <input type="password" class="form-control" id="passord" onchange="validerPass(this.value)" placeholder="Passord"/>
+                    <span id="regexPassord" style="color: red"></span>
+                </div>
+            </form>
+            <button class="btn btn-primary" onclick="regKunde()">Registrer</button><br/>
+        </div>
+    </div>
+</div>
+</body>
+<script src="index.js"></script>
+<script src="validering.js"></script>
+<script src="kunde.js"></script>
+</html>

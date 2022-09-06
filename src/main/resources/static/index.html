@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Motorvognregister</title>
+</head>
+<body onload="hentAlle()">
+<button class="btn btn-primary" onclick="hentAlle()">Hent</button><br/>
+<button class="btn btn-primary" onclick="forside()">Forside</button><br/>
+    <div class="container">
+        <div  style="float:right" >
+            <label for="ddlSortering">Sortering: </label>
+            <select name="sortering" id="ddlSortering" class="form-select" onchange="hentAlle()">
+                <option value="Merke">Merke</option>
+                <option value="Navn">Navn</option>
+            </select>
+        </div>
+        <div class="col-md-8">
+            <h3>Alle bilene:</h3>
+            <div id="bilene" class="table-responsive"></div>
+            <button class="btn btn-danger" onclick="slettAlle()">Slett alle biler</button>
+        </div>
+    </div>
+    <div id="feil" style="color:#ff0000"></div>
+    <script src="index.js"></script>
+</body>
+</html>
